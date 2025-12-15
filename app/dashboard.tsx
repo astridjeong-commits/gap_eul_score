@@ -120,7 +120,7 @@ export default function DashboardPage({
     try {
       console.log("📥 PDF 다운로드 시작...")
       
-      const response = await fetch('${API_URL}/download-report', {
+      const response = await fetch(`${API_URL}/download-report`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -162,7 +162,7 @@ export default function DashboardPage({
     try {
       const fileNameWithoutExt = fileName.replace(/\.(pdf|docx|txt)$/i, '')
       
-      const response = await fetch('${API_URL}/export-notion', {
+      const response = await fetch(`${API_URL}/export-notion`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
