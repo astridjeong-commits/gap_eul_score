@@ -1,5 +1,7 @@
 "use client"
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+
 import { useState } from "react"
 import { 
   Scale, 
@@ -118,7 +120,7 @@ export default function DashboardPage({
     try {
       console.log("📥 PDF 다운로드 시작...")
       
-      const response = await fetch("http://localhost:8000/download-report", {
+      const response = await fetch('${API_URL}/download-report', {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -160,7 +162,7 @@ export default function DashboardPage({
     try {
       const fileNameWithoutExt = fileName.replace(/\.(pdf|docx|txt)$/i, '')
       
-      const response = await fetch("http://localhost:8000/export-notion", {
+      const response = await fetch('${API_URL}/export-notion', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

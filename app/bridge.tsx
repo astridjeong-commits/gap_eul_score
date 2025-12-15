@@ -1,5 +1,7 @@
 "use client"
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+
 import { useState, useRef } from "react"
 import { Upload, FileText, Shield, Scale, CheckCircle, Moon, Sun, Target, FileType, Loader2 } from "lucide-react" 
 
@@ -73,7 +75,7 @@ export default function GapEulBridge({ onAnalyzeComplete }: BridgeProps) {
     try {
       // 1단계: 파일 업로드 및 텍스트 추출
       setAnalysisStep("파일을 업로드하고 있습니다...");
-      const uploadResponse = await fetch("http://localhost:8000/upload", {
+      const uploadResponse = await fetch('${API_URL}/upload', {
         method: "POST",
         body: formData,
       });
@@ -89,7 +91,7 @@ export default function GapEulBridge({ onAnalyzeComplete }: BridgeProps) {
 
       // 2단계: Claude AI 분석
       setAnalysisStep("AI가 계약서를 분석하고 있습니다...");
-      const analysisResponse = await fetch("http://localhost:8000/analyze/with-mcp", {
+      const analysisResponse = await fetch('${API_URL}/analyze/with-mcp', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ contract_text: extractedText }),
