@@ -1,0 +1,16 @@
+mcp
+fastapi
+uvicorn[standard]
+pydantic
+requests
+streamlit
+pypdf
+anthropic
+PyPDF2
+python-docx
+python-multipart
+reportlab
+notion-client
+pytesseract
+pdf2image
+Pillow
