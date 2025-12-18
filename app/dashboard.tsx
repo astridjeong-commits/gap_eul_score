@@ -492,7 +492,7 @@ export default function DashboardPage({
           </Card>
         )}
 
-        {/* 계약서 원문 미리보기 */}
+//         {/* 계약서 원문 미리보기 */}
 //         <Card className="p-8">
 //           <h2 className="text-xl font-bold mb-6">계약서 원문 (처음 500자)</h2>
 //           <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 text-sm text-slate-400">
