@@ -492,15 +492,6 @@ export default function DashboardPage({
           </Card>
         )}
 
-//         {/* 계약서 원문 미리보기 */}
-//         <Card className="p-8">
-//           <h2 className="text-xl font-bold mb-6">계약서 원문 (처음 500자)</h2>
-//           <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 text-sm text-slate-400">
-//             {contractText.substring(0, 500)}...
-//           </div>
-//           <p className="text-xs text-slate-500 mt-3">전체 {contractText.length.toLocaleString()}자</p>
-//         </Card>
-
       </main>
 
       <footer className="w-full p-6 text-center text-xs text-slate-600 border-t border-slate-700/50 mt-12">
